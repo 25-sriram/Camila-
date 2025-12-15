@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://camilaexpensetracker.vercel.app/';
 const getToken = () => localStorage.getItem('token');
 let currentIncome = 0;
 let currentExpenses = 0;
