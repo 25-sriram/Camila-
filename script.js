@@ -1,7 +1,8 @@
 
 async function handleSignup(username, email, password) {
     try {
-        const response = await fetch('https://camilaexpensetracker.vercel.app/api/auth/signup', {
+        const BACKEND_URL = 'https://camilaexpensetracker.vercel.app';
+const response = await fetch(`${BACKEND_URL}/api/auth/signup`,{
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

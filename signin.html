@@ -26,13 +26,15 @@
 
         async function handleLogin(email, password) {
             try {
-                const response = await fetch('https://camilaexpensetracker.vercel.app/api/auth/login', {
-                    method: 'POST',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify({ email, password }),
-                });
+                const BACKEND_URL = 'https://camilaexpensetracker.vercel.app';
+                const response = await fetch(`${BACKEND_URL}/api/auth/login`,
+                    {
+                        method: 'POST',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({ email, password }),
+                    });
 
                 const data = await response.json();
 
